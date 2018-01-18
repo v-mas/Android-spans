@@ -7,7 +7,7 @@ import android.text.SpannableStringBuilder
 import android.text.style.ReplacementSpan
 
 /**
- * Span that inserts given {@link #text} every given {@Link #everyPos} space 
+ * Span that inserts given [text] every given [everyPos] space
  */
 class InsertTextSpan(private val text: CharSequence, @IntRange(from = 1) private val everyPos: Int): ReplacementSpan() {
     init {
@@ -15,7 +15,7 @@ class InsertTextSpan(private val text: CharSequence, @IntRange(from = 1) private
     }
 
     /**
-     * count how many times {@link #everyPos} is inside given range
+     * count how many times [everyPos] is inside given range
      *
      * @param start the start index (inclusive).
      * @param end the end index (exclusive).
@@ -23,7 +23,7 @@ class InsertTextSpan(private val text: CharSequence, @IntRange(from = 1) private
     private fun countOccurrences(start: Int, end: Int): Int = (((end - 1) / everyPos) - (start / everyPos))
 
     /**
-     * inserts {@link #text} in target text
+     * inserts [text] in target text
      *
      * @param text text to insert to
      * @param start the start index (inclusive).
