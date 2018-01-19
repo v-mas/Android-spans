@@ -30,7 +30,7 @@ class InsertTextSpan(private val text: CharSequence, @IntRange(from = 1) private
      * @param end the end index (exclusive).
      */
     private fun insertText(text: CharSequence, start: Int, end: Int): CharSequence {
-        val builder = SpannableStringBuilder()
+        val builder = StringBuilder()
 
         var i = start
         var next = ((start / everyPos) * everyPos) + everyPos
